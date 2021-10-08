@@ -15,3 +15,7 @@ li {
   font-size: 20px;
   text-align: center;
 }
+
+.active {
+  color: rgb(39, 155, 184);
+}
