@@ -1,0 +1,17 @@
+ul {
+  width: 18%;
+  height: 90.7vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #124559;
+  align-items: center;
+}
+
+li {
+  width: 60%;
+  padding: 38px;
+  background-color: #aec3b0;
+  font-size: 20px;
+  text-align: center;
+}
