@@ -1,30 +1,41 @@
 <div class="wrapper">
   <div class="title-text">
-    <div class="title login">Login Form</div>
     <div class="title signup">Signup Form</div>
   </div>
   <div class="form-container">
     <div class="form-inner">
-      <form action="#" class="signup">
+      <form #signUp="ngForm" (ngSubmit)="onSubmit(signUp.value)">
         <div class="field">
-          <input type="text" placeholder="Email Address" required />
+          <input type="text" name="name" placeholder="name" ngModel required />
         </div>
         <div class="field">
-          <input type="password" placeholder="Password" required />
+          <input
+            type="text"
+            name="email"
+            placeholder="Email Address"
+            ngModel
+            required
+          />
         </div>
         <div class="field">
-          <input type="password" placeholder="Confirm password" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            ngModel
+            required
+          />
         </div>
+
         <div class="field btn">
-          <div class="btn-layer"></div>
-          <input type="submit" value="Signup" />
+          <button type="submit">Sign Up</button>
         </div>
       </form>
     </div>
   </div>
 </div>
-
-<pre>{{ json }}</pre>
+<!-- 
+<pre>{{ json }}</pre> -->
 <!-- <script>
         const loginText = document.querySelector(".title-text .login");
         const loginForm = document.querySelector("form.login");

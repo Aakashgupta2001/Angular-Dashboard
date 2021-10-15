@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { DataFetchService } from 'src/app/services/dataFetch/data-fetch.service';
 
 @Component({
@@ -7,14 +8,31 @@ import { DataFetchService } from 'src/app/services/dataFetch/data-fetch.service'
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
+  url = 'https://angular-dashboard-vap.herokuapp.com/api/v1/user/signup';
   json;
-  constructor(private user: DataFetchService) {
-    this.user
-      .postUserData()
+  constructor(private http: HttpClient) {
+    // this.user
+    //   .postUserData()
+    //   .toPromise()
+    //   .then((data: any) => {
+    //     console.log(data);
+    //     this.json = data.json;
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+  }
+  onSubmit(data) {
+    const json = {
+      email: data.email,
+      password: data.password,
+      name: data.name,
+    };
+    this.http
+      .post(this.url, json)
       .toPromise()
       .then((data: any) => {
         console.log(data);
-        this.json = data.json;
       })
       .catch((err) => {
         console.log(err);
