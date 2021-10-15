@@ -10,6 +10,7 @@ import { SyllabusComponent } from './components/syllabus/syllabus.component';
 import { VideosComponent } from './components/videos/videos.component';
 
 const routes: Routes = [
+  { path: '', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'syllabus', component: SyllabusComponent },
   { path: 'schedule', component: ScheduleComponent },
