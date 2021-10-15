@@ -8,17 +8,26 @@ import { ScheduleComponent } from './components/schedule/schedule.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { SyllabusComponent } from './components/syllabus/syllabus.component';
 import { VideosComponent } from './components/videos/videos.component';
+import { LogInAuthGuard } from './guard/log-in-auth.guard';
+import { LogInSignUpAuthGuard } from './guard/log-in-sign-up-auth.guard';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent, canActivate: [LogInAuthGuard] },
   { path: 'syllabus', component: SyllabusComponent },
   { path: 'schedule', component: ScheduleComponent },
   { path: 'notes', component: NotesComponent },
   { path: 'videos', component: VideosComponent },
   { path: 'code', component: CodeComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'signUp', component: SignupComponent },
+  {
+    path: 'login',
+    component: LoginComponent,
+    canActivate: [LogInSignUpAuthGuard],
+  },
+  {
+    path: 'signUp',
+    component: SignupComponent,
+    canActivate: [LogInSignUpAuthGuard],
+  },
 ];
 
 @NgModule({

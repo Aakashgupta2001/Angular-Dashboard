@@ -9,7 +9,9 @@ export class GlobalServicesService {
     this.isloggedIn = false;
   }
   setIsLoggedIn(data) {
+    console.log(data);
     this.isloggedIn = data;
+    console.log(this.isloggedIn);
   }
   getIsLoggedIn() {
     return this.isloggedIn;

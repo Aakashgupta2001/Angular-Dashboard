@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from './components/button/button.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GlobalServicesService } from './services/global-services.service';
+import { LogInAuthGuard } from './guard/log-in-auth.guard';
+import { LogInSignUpAuthGuard } from './guard/log-in-sign-up-auth.guard';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,7 @@ import { GlobalServicesService } from './services/global-services.service';
     IgxNavbarModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [LogInAuthGuard, GlobalServicesService, LogInSignUpAuthGuard],
   entryComponents: [],
   bootstrap: [AppComponent],
 })
