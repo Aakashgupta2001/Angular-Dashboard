@@ -4,9 +4,14 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class GlobalServicesService {
-  constructor(public isLoggedIn: boolean = true) {}
-
-  loggedIn() {
-    return this.isLoggedIn;
+  isloggedIn: boolean;
+  constructor() {
+    this.isloggedIn = false;
+  }
+  setIsLoggedIn(data) {
+    this.isloggedIn = data;
+  }
+  getIsLoggedIn() {
+    return this.isloggedIn;
   }
 }

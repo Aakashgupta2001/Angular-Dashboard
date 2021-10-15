@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { GlobalServicesService } from 'src/app/services/global-services.service';
+
 @Component({
   encapsulation: ViewEncapsulation.None,
   selector: 'app-navbar',
@@ -6,11 +8,15 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  constructor() {}
+  check: boolean;
+  constructor(private shared: GlobalServicesService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.check = this.shared.getIsLoggedIn();
+  }
 
   logOut() {
+    this.shared.setIsLoggedIn(false);
     console.log('Logged Out');
   }
 }

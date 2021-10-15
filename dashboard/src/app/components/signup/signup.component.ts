@@ -9,19 +9,8 @@ import { DataFetchService } from 'src/app/services/dataFetch/data-fetch.service'
 })
 export class SignupComponent implements OnInit {
   url = 'https://angular-dashboard-vap.herokuapp.com/api/v1/user/signup';
-  json;
-  constructor(private http: HttpClient) {
-    // this.user
-    //   .postUserData()
-    //   .toPromise()
-    //   .then((data: any) => {
-    //     console.log(data);
-    //     this.json = data.json;
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
-  }
+
+  constructor(private http: HttpClient) {}
   onSubmit(data) {
     const json = {
       email: data.email,

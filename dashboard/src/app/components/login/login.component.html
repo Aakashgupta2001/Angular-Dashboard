@@ -4,7 +4,7 @@
   </div>
   <div class="form-container">
     <div class="form-inner">
-      <form action="#" class="login">
+      <form #login="ngForm" (ngSubmit)="onSubmit(login.value)" class="login">
         <div class="field">
           <input type="text" placeholder="Email Address" required />
         </div>
@@ -15,8 +15,7 @@
           <a href="#">Forgot password?</a>
         </div>
         <div class="field btn">
-          <div class="btn-layer"></div>
-          <input type="submit" value="Login" />
+          <button class="btn-layer" type="submit">login</button>
         </div>
         <div class="signup-link">
           Not a member? <a href="/signUp">Signup now</a>
