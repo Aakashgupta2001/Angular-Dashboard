@@ -9,8 +9,7 @@ import { IgxIconModule, IgxNavbarModule } from 'igniteui-angular';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from './components/button/button.component';
-import { LoginComponent } from './components/login/login.component';
-import { SignupComponent } from './components/signup/signup.component';
+import { HttpClientModule } from '@angular/common/http';
 import { GlobalServicesService } from './services/global-services.service';
 
 @NgModule({
@@ -28,6 +27,7 @@ import { GlobalServicesService } from './services/global-services.service';
     FormsModule,
     IgxIconModule,
     IgxNavbarModule,
+    HttpClientModule,
   ],
   providers: [],
   entryComponents: [],
