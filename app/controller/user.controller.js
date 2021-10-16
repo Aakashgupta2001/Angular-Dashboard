@@ -1,6 +1,7 @@
 const userModel = require("../models/user.model");
 const service = require("../service/service");
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
 
 exports.signup = async (req, res, next) => {
   try {
@@ -20,4 +21,36 @@ exports.signup = async (req, res, next) => {
   } catch (err) {
     return res.status(400).send(err);
   }
+};
+
+exports.login = async (req, res) => {
+  try {
+    if (!req.body || !req.body.email || !req.body.password) {
+      return res.status(400).send("error bad request");
+    }
+    const filter = {
+      email: req.body.email,
+    };
+    const user = await service.findOne(userModel, filter);
+    if (!user) {
+      return res.status(404).send("User does not exist");
+    }
+
+    const result = await bcrypt.compare(req.body.password, user.password);
+    if (!result) {
+      return res.status(401).send("Incorrect Password");
+    }
+    console.log(result);
+    const token = await jwt.sign({ name: user.name, email: user.email, _id: user._id }, process.env.SECRET_KEY, {
+      expiresIn: "24h",
+    });
+    return res.status(200).send({
+      message: "Signin Successful",
+      token: token,
+      data: {
+        name: user.name,
+        email: user.email,
+      },
+    });
+  } catch (err) {}
 };
