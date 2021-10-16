@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+  url = 'https://angular-dashboard-vap.herokuapp.com/api/v1/user/login';
   loggedIn: boolean;
   constructor(
     private http: HttpClient,
@@ -18,8 +19,22 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
   onSubmit(data) {
-    console.log('is');
-    this.shared.setIsLoggedIn(true);
-    this.router.navigate(['/']);
+    const json = {
+      email: data.email,
+      password: data.password,
+    };
+    this.http
+      .post(this.url, json)
+      .toPromise()
+      .then((data: any) => {
+        this.shared.setIsLoggedIn(true);
+        this.router.navigate(['/']);
+        localStorage.setItem('authorization', data.token);
+        console.log(data);
+      })
+      .catch((err) => {
+        alert(err.error);
+        console.log('err=', err);
+      });
   }
 }

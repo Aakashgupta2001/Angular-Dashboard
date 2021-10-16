@@ -22,6 +22,5 @@ export class NavbarComponent implements OnInit {
   logOut() {
     this.shared.setIsLoggedIn(false);
     this.router.navigate(['/login']);
-    console.log('Logged Out');
   }
 }

@@ -6,10 +6,22 @@
     <div class="form-inner">
       <form #login="ngForm" (ngSubmit)="onSubmit(login.value)" class="login">
         <div class="field">
-          <input type="text" placeholder="Email Address" required />
+          <input
+            type="text"
+            name="email"
+            placeholder="Email Address"
+            ngModel
+            required
+          />
         </div>
         <div class="field">
-          <input type="password" placeholder="Password" required />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            ngModel
+            required
+          />
         </div>
         <div class="pass-link">
           <a href="#">Forgot password?</a>

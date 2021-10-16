@@ -12,7 +12,6 @@ export class LogInSignUpAuthGuard implements CanActivate {
     if (!this.shared.getIsLoggedIn()) {
       return true;
     } else {
-      console.log('logsign');
       this.router.navigate(['/']);
       return false;
     }

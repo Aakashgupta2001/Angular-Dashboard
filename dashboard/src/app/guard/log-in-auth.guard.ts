@@ -9,7 +9,6 @@ export class LogInAuthGuard implements CanActivate {
   constructor(private shared: GlobalServicesService, private router: Router) {}
 
   canActivate(): boolean {
-    console.log('hey', this.shared.getIsLoggedIn());
     if (this.shared.getIsLoggedIn()) {
       return true;
     } else {
