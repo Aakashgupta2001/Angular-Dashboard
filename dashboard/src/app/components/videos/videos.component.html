@@ -1,1 +1,6 @@
-<p>videos works!</p>
+<div *ngFor="let obj of finalData">
+  <mat-card>
+    <a href="{{ obj.url }}" target="_blank"> Click here to waste time </a>
+    <mat-card-title>{{ obj.name }}</mat-card-title>
+  </mat-card>
+</div>

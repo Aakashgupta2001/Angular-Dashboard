@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { GlobalServicesService } from './services/global-services.service';
 import { LogInAuthGuard } from './guard/log-in-auth.guard';
 import { LogInSignUpAuthGuard } from './guard/log-in-sign-up-auth.guard';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { LogInSignUpAuthGuard } from './guard/log-in-sign-up-auth.guard';
     IgxIconModule,
     IgxNavbarModule,
     HttpClientModule,
+    MatCardModule,
   ],
   providers: [LogInAuthGuard, GlobalServicesService, LogInSignUpAuthGuard],
   entryComponents: [],

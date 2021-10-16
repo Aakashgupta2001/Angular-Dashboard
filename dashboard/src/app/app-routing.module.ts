@@ -26,12 +26,10 @@ const routes: Routes = [
   {
     path: 'notes',
     component: NotesComponent,
-    canActivate: [LogInAuthGuard],
   },
   {
     path: 'videos',
     component: VideosComponent,
-    canActivate: [LogInAuthGuard],
   },
   {
     path: 'code',
