@@ -13,11 +13,31 @@ import { LogInSignUpAuthGuard } from './guard/log-in-sign-up-auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [LogInAuthGuard] },
-  { path: 'syllabus', component: SyllabusComponent },
-  { path: 'schedule', component: ScheduleComponent },
-  { path: 'notes', component: NotesComponent },
-  { path: 'videos', component: VideosComponent },
-  { path: 'code', component: CodeComponent },
+  {
+    path: 'syllabus',
+    component: SyllabusComponent,
+    canActivate: [LogInAuthGuard],
+  },
+  {
+    path: 'schedule',
+    component: ScheduleComponent,
+    canActivate: [LogInAuthGuard],
+  },
+  {
+    path: 'notes',
+    component: NotesComponent,
+    canActivate: [LogInAuthGuard],
+  },
+  {
+    path: 'videos',
+    component: VideosComponent,
+    canActivate: [LogInAuthGuard],
+  },
+  {
+    path: 'code',
+    component: CodeComponent,
+    canActivate: [LogInAuthGuard],
+  },
   {
     path: 'login',
     component: LoginComponent,

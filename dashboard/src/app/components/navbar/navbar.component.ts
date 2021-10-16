@@ -20,6 +20,7 @@ export class NavbarComponent implements OnInit {
   }
 
   logOut() {
+    localStorage.removeItem('authorization');
     this.shared.setIsLoggedIn(false);
     this.router.navigate(['/login']);
   }
