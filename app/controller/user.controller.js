@@ -41,9 +41,13 @@ exports.login = async (req, res) => {
       return res.status(401).send("Incorrect Password");
     }
     console.log(result);
-    const token = await jwt.sign({ name: user.name, email: user.email, _id: user._id }, process.env.SECRET_KEY, {
-      expiresIn: "24h",
-    });
+    const token = await jwt.sign(
+      { name: user.name, email: user.email, _id: user._id },
+      process.env.SECRET_KEY,
+      {
+        expiresIn: "24h",
+      }
+    );
     return res.status(200).send({
       message: "Signin Successful",
       token: token,
@@ -69,7 +73,7 @@ module.exports.verifyToken = function (req, res, next) {
     //if can verify the token, set req.user and pass to next middleware
     const decoded = jwt.verify(token, process.env.SECRET_KEY);
     req.user = decoded;
-    return res.status(200).send(decoded);
+    return res.status(202).send(decoded);
   } catch (err) {
     console.log(err);
     return res.status(400).send("Invalid Token");
