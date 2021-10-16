@@ -16,6 +16,7 @@ export class NotesComponent implements OnInit {
   response: any;
   finalData: any;
   data: any;
+
   constructor(private http: HttpClient, private shared: GlobalServicesService) {
     this.token = this.shared.oneDriveToken;
     this.header = new HttpHeaders().set('Authorization', this.token);
@@ -36,7 +37,11 @@ export class NotesComponent implements OnInit {
             : '';
         });
         this.finalData = this.data.map((obj) => {
-          return { name: obj.name, url: obj.webUrl };
+          return {
+            name: obj.name,
+            url: obj.webUrl,
+            download: obj['@microsoft.graph.downloadUrl'],
+          };
         });
 
         console.log(this.finalData);

@@ -42,7 +42,11 @@ export class VideosComponent implements OnInit {
           return obj.file ? obj.file.mimeType === 'video/mp4' : '';
         });
         this.finalData = this.data.map((obj) => {
-          return { name: obj.name, url: obj.webUrl };
+          return {
+            name: obj.name,
+            url: obj.webUrl,
+            download: obj['@microsoft.graph.downloadUrl'],
+          };
         });
 
         console.log(this.finalData);

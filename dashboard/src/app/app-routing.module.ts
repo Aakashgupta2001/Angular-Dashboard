@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CodeComponent } from './components/code/code.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NotesComponent } from './components/notes/notes.component';
@@ -12,7 +13,7 @@ import { LogInAuthGuard } from './guard/log-in-auth.guard';
 import { LogInSignUpAuthGuard } from './guard/log-in-sign-up-auth.guard';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, canActivate: [LogInAuthGuard] },
+  { path: '', component: DashboardComponent, canActivate: [LogInAuthGuard] },
   {
     path: 'syllabus',
     component: SyllabusComponent,
