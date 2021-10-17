@@ -1,10 +1,22 @@
 <app-dashboard class="abc"></app-dashboard>
 <div class="dashNotes">
-  <div *ngFor="let obj of finalData">
-    <mat-card>
-      <a href="{{ obj.url }}" target="_blank"> Click here</a>
-      <a href="{{ obj.download }}" target="_blank">Download Now</a>
-      <mat-card-title>{{ obj.name }}</mat-card-title>
-    </mat-card>
+  <div *ngFor="let obj of finalData" class="card">
+    <div class="heading">
+      <h3>{{ obj.name }}</h3>
+    </div>
+    <hr
+      style="
+        height: 2px;
+        width: 100%;
+        border-width: 0;
+        color: #f1eff0;
+        background-color: #f1eff0;
+      "
+    />
+    <div class="btns">
+      <a href="{{ obj.url }}" target="_blank">Read Now</a>
+      <div class="verticalLine"></div>
+      <a href="{{ obj.download }}" target="_blank">Download</a>
+    </div>
   </div>
 </div>
