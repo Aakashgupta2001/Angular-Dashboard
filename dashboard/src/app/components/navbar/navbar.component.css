@@ -3,14 +3,20 @@
   padding: 0;
 }
 
+nav {
+  border: 0px;
+}
+
 .nav-links {
   display: flex;
   width: 100%;
+  height: 10vh;
+  border: 0px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #124559;
-  color: aliceblue;
+  background-color: #fff;
+  color: #000;
 }
 
 .nav-links ul {
@@ -28,18 +34,34 @@
 
 .app-name h2 {
   padding: 13px;
+  color: black;
 }
 
 .details h3 {
   margin: 13px;
 }
 
-.btn-style {
+/* .btn {
+  height: 8px;
   margin: 13px;
   padding: 10px;
-  background-color: #aec3b0;
-  color: black;
-  border-radius: 20px;
+  background: -webkit-linear-gradient(
+    right,
+    #00b2e3,
+    #20e2ae,
+    #00b2e3,
+    #20e2ae
+  );
+  border-radius: 5px;
+  border: 0px;
+  color: white;
+  font-size: large;
+  cursor: pointer;
+} */
+
+.btn-style {
+  padding: 12px;
+  align-items: center;
 }
 
 .btn-style:hover {

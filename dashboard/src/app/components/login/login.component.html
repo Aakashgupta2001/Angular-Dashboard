@@ -1,41 +1,48 @@
-<div class="wrapper">
-  <div class="title-text">
-    <div class="title login">Login Form</div>
-  </div>
-  <div class="form-container">
-    <div class="form-inner">
-      <form #login="ngForm" (ngSubmit)="onSubmit(login.value)" class="login">
-        <div class="field">
-          <input
-            type="text"
-            name="email"
-            placeholder="Email Address"
-            ngModel
-            required
-          />
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title login">Login Form</div>
+      </div>
+      <div class="form-container">
+        <div class="form-inner">
+          <form
+            #login="ngForm"
+            (ngSubmit)="onSubmit(login.value)"
+            class="login"
+          >
+            <div class="field">
+              <input
+                type="text"
+                name="email"
+                placeholder="Email Address"
+                ngModel
+                required
+              />
+            </div>
+            <div class="field">
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                ngModel
+                required
+              />
+            </div>
+            <div class="field btn">
+              <button class="btn-layer" type="submit">Login</button>
+            </div>
+            <div class="signup-link">
+              Not a member? <a href="/signUp">Signup now</a>
+            </div>
+          </form>
         </div>
-        <div class="field">
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            ngModel
-            required
-          />
-        </div>
-        <div class="pass-link">
-          <a href="#">Forgot password?</a>
-        </div>
-        <div class="field btn">
-          <button class="btn-layer" type="submit">login</button>
-        </div>
-        <div class="signup-link">
-          Not a member? <a href="/signUp">Signup now</a>
-        </div>
-      </form>
+      </div>
     </div>
-  </div>
-</div>
+  </body>
+</html>
+
 <!-- <script>
         const loginText = document.querySelector(".title-text .login");
         const loginForm = document.querySelector("form.login");

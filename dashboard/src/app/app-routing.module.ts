@@ -21,12 +21,10 @@ const routes: Routes = [
   {
     path: 'syllabus',
     component: SyllabusComponent,
-    canActivate: [LogInAuthGuard],
   },
   {
     path: 'schedule',
     component: ScheduleComponent,
-    canActivate: [LogInAuthGuard],
   },
   {
     path: 'notes',
@@ -39,7 +37,7 @@ const routes: Routes = [
   {
     path: 'code',
     component: CodeComponent,
-    canActivate: [LogInAuthGuard],
+    // canActivate: [LogInAuthGuard],
   },
   {
     path: 'login',
