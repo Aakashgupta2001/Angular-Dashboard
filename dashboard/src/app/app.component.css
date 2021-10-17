@@ -1,0 +1,7 @@
+.navClass {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+}

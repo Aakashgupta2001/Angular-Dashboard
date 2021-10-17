@@ -1,8 +1,12 @@
-<app-dashboard></app-dashboard>
-<div *ngFor="let obj of finalData">
-  <mat-card>
-    <a href="{{ obj.url }}" target="_blank">Click Me</a>
-    <a href="{{ obj.download }}" target="_blank">Download Now</a>
-    <mat-card-title>{{ obj.name }}</mat-card-title>
-  </mat-card>
+<app-dashboard class="abc"></app-dashboard>
+<div class="dashVideos">
+  <div *ngFor="let obj of finalData">
+    <mat-card class="example-card">
+      <mat-card-title>{{ obj.name }}</mat-card-title>
+      <mat-card-actions>
+        <a href="{{ obj.url }}" target="_blank">Click Me</a>
+        <a href="{{ obj.download }}" target="_blank">Download Now</a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>

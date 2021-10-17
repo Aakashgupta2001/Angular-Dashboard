@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DataFetchService } from 'src/app/services/dataFetch/data-fetch.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -10,7 +11,7 @@ import { DataFetchService } from 'src/app/services/dataFetch/data-fetch.service'
 export class SignupComponent implements OnInit {
   url = 'https://angular-dashboard-vap.herokuapp.com/api/v1/user/signup';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
   onSubmit(data) {
     const json = {
       email: data.email,
@@ -22,9 +23,12 @@ export class SignupComponent implements OnInit {
       .toPromise()
       .then((data: any) => {
         console.log(data);
+        alert('Sign Up Successful!');
+        this.router.navigate(['/login']);
       })
       .catch((err) => {
         console.log(err);
+        alert('Email already exists!');
       });
   }
 

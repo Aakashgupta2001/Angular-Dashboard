@@ -1,0 +1,11 @@
+.dashHome {
+  position: absolute;
+  top: 12vh;
+  left: 20vw;
+}
+
+.abc {
+  width: 100%;
+  height: 90vh;
+  position: fixed;
+}

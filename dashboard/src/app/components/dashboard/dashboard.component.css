@@ -1,9 +1,12 @@
 .dash {
   background-color: #f1eff0;
+  margin-top: 10vh;
+  position: fixed;
+  width: 100%;
 }
 
 ul {
-  width: 18%;
+  width: 18vw;
   height: 90vh;
   border: 0px;
   display: flex;
