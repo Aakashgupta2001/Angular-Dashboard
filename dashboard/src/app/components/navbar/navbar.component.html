@@ -12,7 +12,7 @@
         <h2>Angular Dashboard</h2>
       </div>
       <div class="details" *ngIf="navCheck()">
-        <h3>Name</h3>
+        <h3>{{ shared.userName }}</h3>
         <app-button text="Log Out" (btnClick)="logOut()"></app-button>
       </div>
     </div>

@@ -31,6 +31,7 @@ export class LogInAuthGuard implements CanActivate {
         .toPromise()
         .then((data: any) => {
           this.isloggedIn = true;
+          console.log('data=', data);
           this.router.navigate(['/']);
         })
         .catch((err) => {
