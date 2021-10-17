@@ -1,43 +1,54 @@
-<div class="wrapper">
-  <div class="title-text">
-    <div class="title signup">Signup Form</div>
-  </div>
-  <div class="form-container">
-    <div class="form-inner">
-      <form #signUp="ngForm" (ngSubmit)="onSubmit(signUp.value)">
-        <div class="field">
-          <input type="text" name="name" placeholder="name" ngModel required />
-        </div>
-        <div class="field">
-          <input
-            type="text"
-            name="email"
-            placeholder="Email Address"
-            ngModel
-            required
-          />
-        </div>
-        <div class="field">
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            ngModel
-            required
-          />
-        </div>
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title signup">Signup Form</div>
+      </div>
+      <div class="form-container">
+        <div class="form-inner">
+          <form #signUp="ngForm" (ngSubmit)="onSubmit(signUp.value)">
+            <div class="field">
+              <input
+                type="text"
+                name="name"
+                placeholder="name"
+                ngModel
+                required
+              />
+            </div>
+            <div class="field">
+              <input
+                type="text"
+                name="email"
+                placeholder="Email Address"
+                ngModel
+                required
+              />
+            </div>
+            <div class="field">
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                ngModel
+                required
+              />
+            </div>
 
-        <div class="field btn">
-          <button class="btn-layer" type="submit">Sign Up</button>
+            <div class="field btn">
+              <button class="btn-layer" type="submit">Sign Up</button>
+            </div>
+          </form>
         </div>
-      </form>
+      </div>
+      <br />
+      <div class="login-link">
+        <p><a routerLink="/login">Already have an account?</a></p>
+      </div>
     </div>
-  </div>
-  <br />
-  <div class="login-link">
-    <p><a routerLink="/login">Already have an account?</a></p>
-  </div>
-</div>
+  </body>
+</html>
 <!-- 
 <pre>{{ json }}</pre> -->
 <!-- <script>
