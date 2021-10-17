@@ -13,3 +13,29 @@
   height: 90vh;
   position: fixed;
 }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 8rem;
+  background-color: #fff;
+  border-radius: 5px;
+  transition: all 0.1s ease;
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
+
+.btns a {
+  color: #0094db;
+}
+
+.btns {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
