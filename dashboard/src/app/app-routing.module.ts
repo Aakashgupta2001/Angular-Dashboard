@@ -15,6 +15,10 @@ import { LogInSignUpAuthGuard } from './guard/log-in-sign-up-auth.guard';
 const routes: Routes = [
   { path: '', component: DashboardComponent, canActivate: [LogInAuthGuard] },
   {
+    path: 'home',
+    component: HomeComponent,
+  },
+  {
     path: 'syllabus',
     component: SyllabusComponent,
     canActivate: [LogInAuthGuard],
