@@ -28,7 +28,10 @@ export class SignupComponent implements OnInit {
       })
       .catch((err) => {
         console.log(err);
-        alert('Email already exists!');
+        if(err.statusText == 'Bad Request')
+          alert("user already exists or is empty");
+        else if (err.statusText == 'Not Acceptable')
+          alert("Enter a valid password")
       });
   }
 
