@@ -8,13 +8,14 @@
 html,
 body {
   display: grid;
+  padding-top: 10vh;
   height: 90vh;
   width: 100%;
   place-items: center;
-  background-color: #f6f6f6;
+  background-color: #202124;
 }
 ::selection {
-  background: #fa4299;
+  background: #171717;
   color: #fff;
 }
 .wrapper {
@@ -30,6 +31,11 @@ body {
   border-radius: 5px;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
 }
+
+.wrapper .title-text .title {
+  color: #171717 !important;
+}
+
 .wrapper .title-text {
   display: flex;
   width: 200%;
@@ -102,6 +108,11 @@ input[type="radio"] {
   width: 100%;
   overflow: hidden;
 }
+
+form input {
+  color: #171717 !important;
+}
+
 .form-container .form-inner {
   display: flex;
   width: 200%;
@@ -141,12 +152,13 @@ form .field input:focus::placeholder {
   margin-top: 5px;
 }
 .form-inner form .signup-link {
+  color: #171717 !important;
   text-align: center;
   margin-top: 30px;
 }
 .form-inner form .pass-link a,
 .form-inner form .signup-link a {
-  color: #0094db;
+  color: #0094db !important;
   text-decoration: none;
 }
 .form-inner form .pass-link a:hover,

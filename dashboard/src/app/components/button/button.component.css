@@ -1,9 +1,10 @@
 .btn-style {
-  padding: 0.7rem 1.8rem;
-  background: black;
+  padding: 0.5rem 1.3rem;
+  background: #8ab4f8;
   border-radius: 5px;
+  font-size: 1rem !important;
   border: 0px;
-  color: white;
+  color: #171717 !important;
   font-size: large;
   cursor: pointer;
   transition: all 0.1s;

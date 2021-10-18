@@ -2,10 +2,11 @@
   <nav>
     <div class="nav-links">
       <div class="app-name">
-        <h2>Angular Dashboard</h2>
+        <img src="../../../assets/logo.png" />
+        <!-- <h2>Angular Dashboard</h2> -->
       </div>
       <div class="details" *ngIf="navCheck()">
-        <h3>{{ shared.userName }}</h3>
+        <h2>{{ shared.userName }}</h2>
         <app-button
           class="btn"
           text="Log Out"

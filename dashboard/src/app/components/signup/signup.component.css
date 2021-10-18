@@ -9,12 +9,13 @@ html,
 body {
   display: grid;
   height: 90vh;
+  padding-top: 10vh;
   width: 100%;
   place-items: center;
-  background-color: #f6f6f6;
+  background-color: #202124;
 }
 ::selection {
-  background: #000;
+  background: #171717;
   color: #fff;
 }
 .wrapper {
@@ -25,12 +26,16 @@ body {
   width: 30%;
   margin: auto;
   overflow: hidden;
-
   background: #fff;
   padding: 30px;
   border-radius: 5px;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
 }
+
+.wrapper .title-text .title {
+  color: #171717 !important;
+}
+
 .wrapper .title-text {
   display: flex;
   width: 200%;
@@ -75,7 +80,6 @@ body {
   left: 0;
   z-index: 0;
   border-radius: 5px;
-  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 input[type="radio"] {
@@ -102,6 +106,9 @@ input[type="radio"] {
 .wrapper .form-container {
   width: 100%;
   overflow: hidden;
+}
+form input {
+  color: #171717 !important;
 }
 .form-container .form-inner {
   display: flex;
@@ -195,12 +202,14 @@ form .btn input[type="submit"] {
   cursor: pointer;
 }
 
-.login-link {
+.login-link p {
+  color: #171717 !important;
   text-align: center;
+  text-decoration: none;
 }
 
 .login-link a {
-  color: #0094db;
+  color: #0094db !important;
 }
 
 .login-link:hover {

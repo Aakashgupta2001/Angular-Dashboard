@@ -21,7 +21,7 @@
   justify-content: space-evenly;
   align-items: center;
   height: 8rem;
-  background-color: #fff;
+  background-color: #171717;
   border-radius: 5px;
   transition: all 0.1s ease;
 }
@@ -38,11 +38,11 @@
 }
 
 .btns a {
-  color: #0094db;
+  color: #8ab4f8 !important;
 }
 
 .verticalLine {
-  background-color: #f1eff0;
+  background-color: #5f6368;
   height: 100%;
   width: 1.5px;
   top: 0;

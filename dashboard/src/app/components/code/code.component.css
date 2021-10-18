@@ -20,7 +20,7 @@
   justify-content: space-evenly;
   align-items: center;
   height: 8rem;
-  background-color: #fff;
+  background-color: #171717;
   border-radius: 5px;
   transition: all 0.1s ease;
 }
@@ -30,7 +30,7 @@
 }
 
 .btns a {
-  color: #0094db;
+  color: #8ab4f8 !important;
 }
 
 .btns {

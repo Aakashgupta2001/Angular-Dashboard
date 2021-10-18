@@ -8,4 +8,53 @@
   position: absolute;
   top: 12%;
   left: 20%;
+  padding-bottom: 20px;
+}
+
+.dashSyllabus table {
+  text-align: left !important;
+}
+
+table {
+  width: 78vw;
+  background-color: #303134;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: #070707;
+  border-style: solid;
+  color: #000000;
+}
+th {
+  background: #171717;
+  color: rgb(233, 232, 232);
+}
+.dashSchedule {
+  position: absolute;
+  top: 12vh;
+  left: 20vw;
+}
+td,
+th {
+  border-width: 2px;
+  border-color: #050505;
+  border-style: solid;
+  padding: 15px;
+  font-size: 1rem;
+}
+
+td a {
+  color: #8ab4f8 !important;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  color: #fff;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
