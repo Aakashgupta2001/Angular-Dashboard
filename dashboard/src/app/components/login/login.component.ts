@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
       .toPromise()
       .then((data: any) => {
         this.shared.setIsLoggedIn(true);
-        this.router.navigate(['/']);
+        this.router.navigate(['/home']);
         localStorage.setItem('authorization', data.token);
         console.log(data);
       })
