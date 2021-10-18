@@ -11,33 +11,43 @@ import { SyllabusComponent } from './components/syllabus/syllabus.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { LogInAuthGuard } from './guard/log-in-auth.guard';
 import { LogInSignUpAuthGuard } from './guard/log-in-sign-up-auth.guard';
+import { CheckloginGuard } from './guard/checklogin.guard';
 
 const routes: Routes = [
   { path: '', component: DashboardComponent, canActivate: [LogInAuthGuard] },
   {
     path: 'home',
     component: HomeComponent,
+    canActivate: [CheckloginGuard]
   },
   {
     path: 'syllabus',
     component: SyllabusComponent,
+    canActivate: [CheckloginGuard]
+
   },
   {
     path: 'schedule',
     component: ScheduleComponent,
+    canActivate: [CheckloginGuard]
+
   },
   {
     path: 'notes',
     component: NotesComponent,
+    canActivate: [CheckloginGuard]
+
   },
   {
     path: 'videos',
     component: VideosComponent,
+    canActivate: [CheckloginGuard]
+
   },
   {
     path: 'code',
     component: CodeComponent,
-    // canActivate: [LogInAuthGuard],
+    canActivate: [CheckloginGuard]
   },
   {
     path: 'login',

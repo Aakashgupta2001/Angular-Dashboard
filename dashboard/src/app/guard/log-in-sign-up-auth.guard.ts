@@ -12,7 +12,7 @@ export class LogInSignUpAuthGuard implements CanActivate {
     if (!this.shared.getIsLoggedIn()) {
       return true;
     } else {
-      this.router.navigate(['/']);
+      this.router.navigate(['/home']);
       return false;
     }
   }

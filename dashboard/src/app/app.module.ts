@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { GlobalServicesService } from './services/global-services.service';
 import { LogInAuthGuard } from './guard/log-in-auth.guard';
 import { LogInSignUpAuthGuard } from './guard/log-in-sign-up-auth.guard';
+import { CheckloginGuard } from './guard/checklogin.guard';
 import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
@@ -33,7 +34,7 @@ import { MatCardModule } from '@angular/material/card';
     HttpClientModule,
     MatCardModule,
   ],
-  providers: [LogInAuthGuard, GlobalServicesService, LogInSignUpAuthGuard],
+  providers: [LogInAuthGuard, GlobalServicesService, LogInSignUpAuthGuard, CheckloginGuard],
   entryComponents: [],
   bootstrap: [AppComponent],
 })
