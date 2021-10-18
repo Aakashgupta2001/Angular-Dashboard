@@ -1,18 +1,41 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { IgxIconModule, IgxNavbarModule } from 'igniteui-angular';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
+import { ButtonComponent } from './components/button/button.component';
+import { HttpClientModule } from '@angular/common/http';
+import { GlobalServicesService } from './services/global-services.service';
+import { LogInAuthGuard } from './guard/log-in-auth.guard';
+import { LogInSignUpAuthGuard } from './guard/log-in-sign-up-auth.guard';
+import { CheckloginGuard } from './guard/checklogin.guard';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    NavbarComponent,
+    ButtonComponent,
+    routingComponents,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    IgxIconModule,
+    IgxNavbarModule,
+    HttpClientModule,
+    MatCardModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [LogInAuthGuard, GlobalServicesService, LogInSignUpAuthGuard, CheckloginGuard],
+  entryComponents: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,0 +1,17 @@
+<section>
+  <nav>
+    <div class="nav-links">
+      <div class="app-name">
+        <h2>Angular Dashboard</h2>
+      </div>
+      <div class="details" *ngIf="navCheck()">
+        <h3>{{ shared.userName }}</h3>
+        <app-button
+          class="btn"
+          text="Log Out"
+          (btnClick)="logOut()"
+        ></app-button>
+      </div>
+    </div>
+  </nav>
+</section>
