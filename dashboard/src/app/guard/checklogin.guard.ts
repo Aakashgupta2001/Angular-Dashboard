@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { Observable } from 'rxjs';
+import {  CanActivate  } from '@angular/router';
+
 import { GlobalServicesService } from '../services/global-services.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -23,14 +23,26 @@ export class CheckloginGuard implements CanActivate {
     this.header = new HttpHeaders().set('authorization', this.token);
   }
   canActivate(): boolean {
-    if(this.shared.getIsLoggedIn()){
-      console.log("is logged in = ",this.shared.getIsLoggedIn())
-      return true
+    if (!this.token) {
+      this.isloggedIn = false;
+      this.router.navigate(['/login']);
+      return false;
     }
     else{
-      this.router.navigate(['/login'])
-      return false
+      this.http
+        .get(this.url, { headers: this.header })
+        .toPromise()
+        .then((data: any) => {
+          this.isloggedIn = true;
+          console.log('data=', data);
+        })
+        .catch((err) => {
+          this.isloggedIn = false;
+          this.router.navigate(['/login']);
+        });
+        return true
     }
+
   }
   
 }

@@ -14,7 +14,7 @@ import { LogInSignUpAuthGuard } from './guard/log-in-sign-up-auth.guard';
 import { CheckloginGuard } from './guard/checklogin.guard';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent, canActivate: [LogInAuthGuard] },
+  { path: '', component: DashboardComponent, canActivate: [CheckloginGuard] },
   {
     path: 'home',
     component: HomeComponent,

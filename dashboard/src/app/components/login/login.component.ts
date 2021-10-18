@@ -30,6 +30,8 @@ export class LoginComponent implements OnInit {
         this.shared.setIsLoggedIn(true);
         this.router.navigate(['/home']);
         localStorage.setItem('authorization', data.token);
+        window.location.reload()
+
         console.log(data);
       })
       .catch((err) => {
