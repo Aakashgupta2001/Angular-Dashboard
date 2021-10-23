@@ -1,5 +1,5 @@
 .dash {
-  background-color: #f1eff0;
+  background-color: #202124;
   margin-top: 10vh;
   position: fixed;
   width: 100%;
@@ -13,18 +13,17 @@ ul {
   box-shadow: none;
   justify-content: space-around;
   flex-direction: column;
-  background-color: #fff;
+  background-color: #171717;
   align-items: center;
 }
 
 li {
   width: 60%;
   padding: 30px;
-  background: #f1eff0;
+  background: #202124;
   border-radius: 5px;
   border: 0px;
   box-shadow: none;
-  color: rgb(87, 87, 87);
   font-size: large;
   cursor: pointer;
   font-size: 20px;
@@ -36,7 +35,7 @@ li {
 li a {
   width: 60%;
   padding: 38px;
-  color: black;
+  color: #fff;
   font-size: 20px;
   text-align: center;
 }
